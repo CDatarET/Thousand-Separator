@@ -6,18 +6,14 @@ public class Solution {
             sb.Append(n % 10);
             n /= 10;
 
-            if(i++ % 3 == 0 && n > 0){
-                sb.Append('.');
-            }
+            if(i++ % 3 == 0 && n > 0) sb.Append('.');
         }
 
         return(new string(sb.ToString().Reverse().ToArray()));
     }
 
     public string ThousandSeparator(int n) {
-        if(n <= 999){
-            return("" + n);
-        }
+        if(n <= 999) return("" + n);
 
         return(builder(n));
     }
